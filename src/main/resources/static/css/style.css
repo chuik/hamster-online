@@ -1,0 +1,66 @@
+*{margin: 0;padding: 0;border: 0;list-style: none;text-decoration: none;color: inherit;font-weight: normal;font-family: "微软雅黑";box-sizing: border-box;font-style: normal;outline: none;-webkit-tap-highlight-color: transparent;outline:none;text-decoration: none;}
+body{width: 100%;overflow-x: hidden;background: #FFFFFF;}
+img{vertical-align: middle;max-width: 100%;}
+/*搜索*/
+.search{display: flex;justify-content: space-between;align-items: center;padding: .2rem .3rem .1rem .2rem;}
+.search input{height: .6rem;line-height: .6rem;width: 100%;background:url(../image/icon-search.png) left .3rem center no-repeat #f4f4f4;padding-left: .7rem;background-size: .29rem .29rem;border-radius: .6rem;font-size: .26rem;}
+.search i{flex-shrink: 0;margin-left: .3rem;background:url(../image/icon-history.png) right center no-repeat;width: .42rem;height: .42rem;background-size: 100%;}
+/*轮播图*/
+.slider{width: 100%;height:auto;padding: .2rem;position: relative;}
+.slider .swiper-slide{width:6.4rem;height:auto;background:#fff;box-shadow:0 .05rem .2rem rgba(0,0,0,.2);}
+.slider .swiper-slide img{display:block;width: 100%;}
+.slider .swiper-pagination{width:100%;bottom:.3rem}
+.slider .swiper-pagination-bullets .swiper-pagination-bullet{margin:0 5px;background-color:rgba(0,0,0,.5);width:.15rem;height:.15rem;}
+.slider .swiper-pagination-bullets .swiper-pagination-bullet-active{background-color:#fff}
+.slider .swiper-button-prev{left:.2rem;top: 0;width:.3rem;height:100%;margin-top: 0;background: none;}
+.slider .swiper-button-prev:hover{background: none;}
+.slider .swiper-button-next{right:.2rem;top: 0;width:.3rem;height:100%;margin-top: 0;background: none;}
+.slider .swiper-button-next:hover{background: none;}
+/*快捷导航*/
+.quick-nav{width: 100%;padding: .2rem 0;}
+.quick-nav ul{width: 100%;display: flex;justify-content: space-between;align-items: center;padding: 0 0.5rem;}
+.quick-nav ul li{display: flex;flex-direction: column;align-items: center;}
+.quick-nav ul li img{width: .8rem;height: .8rem;}
+.quick-nav ul li p{font-size: .24rem;color: #333333;text-align: center;padding-top: .12rem;padding-bottom: .1rem;}
+/*占位*/
+.holder{width: 100%;height: .2rem;background: #f4f4f4;}
+/*热门*/
+.hot{width: 100%;height: auto;overflow: hidden;padding: .2rem .3rem;}
+.hot .title{display: flex;justify-content: space-between;align-items: center;font-size: .28rem;color: #333333;padding-bottom: .25rem;}
+.hot .title>div{display: flex;align-items: center;}
+.hot .title>div i{flex-shrink: 0;width: .28rem;height: .34rem;background:url(../image/icon-hot.png) left center no-repeat;background-size: 100%;margin-right: .1rem;}
+.hot .title a{display: flex;align-items: center;font-size: .26rem;color: #adadad;}
+.hot .title a i{flex-shrink: 0;width: .26rem;height: .26rem;background:url(../image/icon-right-btn.png) right center no-repeat;background-size: 100%;margin-left: .1rem;}
+/*热门列表*/
+.hot{width: 100%;padding-bottom: 1.3rem;}
+.hot ul{display: flex;justify-content: space-between;flex-wrap: wrap;}
+.hot ul li{width: 3.3rem;height: auto;overflow: hidden;position: relative;margin-bottom: .25rem;}
+.hot ul li .img{width: 100%;height: 2.1rem;border-radius: .05rem;overflow: hidden;}
+.hot ul li .img img{width: 100%;height: 100%;}
+.hot ul li .desc .t{font-size: .26rem;color: #333333;padding: .15rem 0;}
+.hot ul li .desc .info{display: flex;justify-content: space-between;;font-size: .24rem;color: #adadad;}
+.hot ul li .desc .info span {display: flex;align-items: center;}
+.hot ul li .desc .info span i.eye{flex-shrink: 0;width: .28rem;height: .20rem;background:url(../image/icon-eye.png) left center no-repeat;background-size: 100%;margin-right: 0.05rem;}
+.hot ul li .desc .info span i.play{flex-shrink: 0;width: .29rem;height: .22rem;background:url(../image/icon-play.png) left center no-repeat;background-size: 100%;margin-right: 0.05rem;}
+.hot ul li .tips{position: absolute;width: 100%;top: .05rem;left: 0;display: flex;justify-content: space-between;align-items: center;padding: 0 0 0 .1rem;}
+.hot ul li .tips .l{display: inline-block;font-size: .22rem;color: #ffffff;background: #e98053;border-radius: .05rem;padding: .05rem .15rem;}
+.hot ul li .tips .l.dark{background: #333333;}
+.hot ul li .tips .r{display: inline-block;width: 1.24rem;height: .34rem;line-height: .34rem;font-size: .22rem;color: #ffffff;text-align: right;padding-right: .15rem;background:url(../image/tag-bg.png) right center no-repeat;background-size: 100%;}
+.hot ul li .tips .r.money{display: flex;align-items: center;justify-content: flex-end;}
+.hot ul li .tips .r.money i{flex-shrink: 0;width: .23rem;height: .23rem;background:url(../image/icon-gold.png) right center no-repeat;background-size: 100%;margin-right: .05rem;}
+/*尾部导航*/
+.foot-nav{position: fixed;left: 0;bottom: 0;width: 100%;height: 1rem;background: #FFFFFF;padding: 0 .3rem;box-shadow: 0 -0.02rem .1rem rgba(200,200,200,.2);z-index: 99999;}
+.foot-nav ul{display: flex;justify-content: space-around;align-items: center;width: 100%;height: 100%;}
+.foot-nav ul li{font-size: .22rem;color: #666666;display: flex;flex-direction: column;}
+.foot-nav ul li i{width: .46rem;height: .42rem;}
+.foot-nav ul li.home i{background: url(../image/nav-home.png) bottom center no-repeat;background-size: .46rem .40rem;}
+.foot-nav ul li.home.active i{background-image: url(../image/nav-home-active.png);}
+.foot-nav ul li.cate i{background: url(../image/nav-cate.png) bottom center no-repeat;background-size: .42rem .42rem;}
+.foot-nav ul li.cate.active i{background-image: url(../image/nav-cate-active.png);}
+.foot-nav ul li.news i{background: url(../image/nav-news.png) bottom center no-repeat;background-size: .34rem .41rem;}
+.foot-nav ul li.news.active i{background-image: url(../image/nav-news-active.png);}
+.foot-nav ul li.mine i{background: url(../image/nav-my.png) bottom center no-repeat;background-size: .42rem .42rem;}
+.foot-nav ul li.mine.active i{background-image: url(../image/nav-my-active.png);}
+.foot-nav ul li.middle{flex-shrink: 0;width: 1.2rem;height: .86rem;background: url(../image/nav-zhibo.png) center center no-repeat;background-size: 100%;}
+.foot-nav ul li p{padding-top: .08rem;}
+.foot-nav ul li.active p{color: #e98053;}

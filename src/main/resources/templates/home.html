@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <title>直播</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="/css/swiper.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <script src="/js/flexible.js" type="text/javascript" ></script>
+  <script src="/js/jquery.min.js" type="text/javascript" ></script>
+  <script src="/js/swiper.min.js" type="text/javascript" ></script>
+</head>
+
+
+<body>
+<!--搜索-->
+<div class="search">
+  <input type="text" placeholder="搜索感兴趣的直播和视频"><i></i>
+</div>
+<!--轮播图-->
+<div class="slider">
+  <div class="swiper-container">
+    <div class="swiper-wrapper" id="banner-box">
+<!--      <div class="swiper-slide"><img src="https://springboot-fileupload2.oss-cn-shanghai.aliyuncs.com/slider1.png"></div>-->
+<!--      <div class="swiper-slide"><img src="https://springboot-fileupload2.oss-cn-shanghai.aliyuncs.com/slider2.png"></div>-->
+<!--      <div class="swiper-slide"><img src="https://springboot-fileupload2.oss-cn-shanghai.aliyuncs.com/slider3.png"></div>-->
+    </div>
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div>
+
+<!--快捷导航-->
+<div class="quick-nav">
+  <ul id="classIfyMenuBox">
+  </ul>
+</div>
+<!--占位-->
+<div class="holder"></div>
+<!--热门推荐-->
+<div class="hot">
+  <div class="title">
+    <div><i></i>热门推荐</div>
+    <a>更多<i></i></a>
+  </div>
+  <ul id="lives">
+<!--    <li>-->
+<!--      <div class="img">-->
+<!--        <img src="/picture/pic1.png">-->
+<!--      </div>-->
+<!--      <div class="desc">-->
+<!--        <div class="t">今天带着小哈户外直播去了..</div>-->
+<!--        <div class="info">-->
+<!--          <span>酷酷炫炫、</span>-->
+<!--          <span><i class="eye"></i>1.2万</span>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="tips">-->
+<!--        <span class="l">直播</span>-->
+<!--        <span class="r">免费</span>-->
+<!--      </div>-->
+<!--    </li>-->
+<!--    <li>-->
+<!--      <div class="img">-->
+<!--        <img src="/picture/pic2.png">-->
+<!--      </div>-->
+<!--      <div class="desc">-->
+<!--        <div class="t">带大家看看我们医院</div>-->
+<!--        <div class="info">-->
+<!--          <span>欣欣154</span>-->
+<!--          <span><i class="play"></i>652</span>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="tips">-->
+<!--        <span class="l dark">13:05</span>-->
+<!--        <span class="r">免费</span>-->
+<!--      </div>-->
+<!--    </li>-->
+<!--    <li>-->
+<!--      <div class="img">-->
+<!--        <img src="/picture/pic3.png">-->
+<!--      </div>-->
+<!--      <div class="desc">-->
+<!--        <div class="t">产品发布会现场直播</div>-->
+<!--        <div class="info">-->
+<!--          <span>jack、李</span>-->
+<!--          <span><i class="eye"></i>342</span>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="tips">-->
+<!--        <span class="l">直播</span>-->
+<!--        <span class="r">私人</span>-->
+<!--      </div>-->
+<!--    </li>-->
+<!--    <li>-->
+<!--      <div class="img">-->
+<!--        <img src="/picture/pic4.png">-->
+<!--      </div>-->
+<!--      <div class="desc">-->
+<!--        <div class="t">直击微创外科论坛会议现场.</div>-->
+<!--        <div class="info">-->
+<!--          <span>刘明主治医师</span>-->
+<!--          <span><i class="eye"></i>148</span>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="tips">-->
+<!--        <span class="l">直播</span>-->
+<!--        <span class="r money"><i></i>10</span>-->
+<!--      </div>-->
+<!--    </li>-->
+
+  </ul>
+</div>
+<!--尾部导航-->
+<div class="foot-nav">
+  <ul>
+    <li class="item home active">
+      <i></i>
+      <p>首页</p>
+    </li>
+    <li class="item cate">
+      <i></i>
+      <p>全部</p>
+    </li>
+    <li class="middle">
+
+    </li>
+    <li class="item news">
+      <i></i>
+      <p>资讯</p>
+    </li>
+    <li class="item mine">
+      <i></i>
+      <p>我的</p>
+    </li>
+  </ul>
+</div>
+</body>
+
+</html>
+<script type="text/javascript" src="/js/home/banner.js"></script>
+<script src="/js/swiper.min.js"  type="text/javascript"></script>
+<script src="/js/home/classifyMenu.js" type="text/javascript"></script>
+<script src="/js/home/live.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+  // 导航切换高亮显示
+  $('.foot-nav ul li.item').click(function() {
+    $('.foot-nav ul li').removeClass('active')
+    $(this).addClass('active')
+  })
+</script>
