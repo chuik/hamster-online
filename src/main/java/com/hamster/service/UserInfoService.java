@@ -1,6 +1,8 @@
 package com.hamster.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.github.yulichang.base.MPJBaseMapper;
+import com.github.yulichang.base.MPJBaseService;
 import com.hamster.entity.UserInfo;
 
 /**
@@ -10,5 +12,5 @@ import com.hamster.entity.UserInfo;
  * @description <TODO description class purpose>
  * @createTime 2023/7/14 10:06
  **/
-public interface UserInfoService extends IService<UserInfo> {
+public interface UserInfoService extends MPJBaseService<UserInfo> {
 }

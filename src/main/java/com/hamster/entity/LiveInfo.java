@@ -58,9 +58,4 @@ public class LiveInfo implements Serializable {
     private Integer status;
 
 
-    private Double visits;
-
-
-    private String liveTitle;
-
 }

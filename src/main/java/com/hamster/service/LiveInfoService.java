@@ -1,6 +1,7 @@
 package com.hamster.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.github.yulichang.base.MPJBaseService;
 import com.hamster.comment.ResultJson;
 import com.hamster.entity.LiveInfo;
 
@@ -11,8 +12,9 @@ import com.hamster.entity.LiveInfo;
  * @description <TODO description class purpose>
  * @createTime 2023/7/14 10:06
  **/
-public interface LiveInfoService extends IService<LiveInfo> {
+public interface LiveInfoService extends MPJBaseService<LiveInfo> {
 
-    ResultJson getLives();
+//    ResultJson getLives();
+    ResultJson getLives(Integer pageIndex);
 
 }

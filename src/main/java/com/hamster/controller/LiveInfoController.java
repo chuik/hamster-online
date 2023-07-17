@@ -4,6 +4,7 @@ import com.hamster.comment.ResultJson;
 import com.hamster.service.LiveInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,9 +16,14 @@ public class LiveInfoController {
     @Autowired
     private LiveInfoService liveInfoService;
 
-    @GetMapping ("/getLives")
-    public ResultJson getLiveInfo(){
-        return liveInfoService.getLives();
+//    @GetMapping ("/getLives")
+//    public ResultJson getLiveInfo(){
+//        return liveInfoService.getLives();
+//    }
+
+    @GetMapping("/getLives/{pageIndex}")
+    public ResultJson getLives(@PathVariable("pageIndex") Integer pageIndex){
+        return liveInfoService.getLives(pageIndex);
     }
 
 }

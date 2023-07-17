@@ -2,6 +2,8 @@ package com.hamster.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.github.yulichang.base.MPJBaseService;
+import com.github.yulichang.base.MPJBaseServiceImpl;
 import com.hamster.comment.RespBeanEnum;
 import com.hamster.comment.ResultJson;
 import com.hamster.entity.ClassifyMenu;
@@ -19,7 +21,7 @@ import java.util.List;
  * @createTime 2023/7/14 10:07
  **/
 @Service
-public class ClassifyMenuServiceImpl extends ServiceImpl<ClassifyMenuMapper, ClassifyMenu> implements ClassifyMenuService {
+public class ClassifyMenuServiceImpl extends MPJBaseServiceImpl<ClassifyMenuMapper, ClassifyMenu> implements ClassifyMenuService {
     @Override
     public ResultJson getMenus() {
         List<ClassifyMenu> menus =  list(new QueryWrapper<ClassifyMenu>().eq("is_show",1));

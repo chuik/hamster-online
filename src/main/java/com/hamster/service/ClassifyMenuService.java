@@ -1,6 +1,7 @@
 package com.hamster.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.github.yulichang.base.MPJBaseService;
 import com.hamster.comment.ResultJson;
 import com.hamster.entity.ClassifyMenu;
 
@@ -11,7 +12,7 @@ import com.hamster.entity.ClassifyMenu;
  * @description <TODO description class purpose>
  * @createTime 2023/7/14 10:05
  **/
-public interface ClassifyMenuService extends IService<ClassifyMenu> {
+public interface ClassifyMenuService extends MPJBaseService<ClassifyMenu> {
     ResultJson getMenus();
 
 }

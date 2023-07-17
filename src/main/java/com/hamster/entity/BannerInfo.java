@@ -54,9 +54,5 @@ public class BannerInfo implements Serializable {
 
     private Integer status;
 
-    /**
-    * 
-    */
-
 
 }

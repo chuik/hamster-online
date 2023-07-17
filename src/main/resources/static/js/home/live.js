@@ -1,32 +1,31 @@
-
-$(function () {
-    lodeLives();
-})
-
-function lodeLives() {
-
-    $.ajax({
-        url: "/live/getLives",
-        type: "get",
-        dataType: "json",
-        success(res) {
-
-            if (res.code == 200) {
-                let lives = res.data;
-                let livesBox = document.getElementById("lives");
-                for (let life of lives) {
-                    livesBox.appendChild(addlive(life));
-                }
-            } else {
-                alert(res.message);
-            }
-        }
-    })
-
-}
-
+// $(function () {
+//     lodeLives();
+// })
+//
+// function lodeLives() {
+//
+//     $.ajax({
+//         url: "/live/getLives",
+//         type: "get",
+//         dataType: "json",
+//         success(res) {
+//
+//             if (res.code == 200) {
+//                 let lives = res.data;
+//                 let livesBox = document.getElementById("lives");
+//                 for (let life of lives) {
+//                     livesBox.appendChild(addlive(life));
+//                 }
+//             } else {
+//                 alert(res.message);
+//             }
+//         }
+//     })
+//
+// }
 
 
+// 第一种方法
 // function loadliveInfo(){
 //     $.ajax({
 //         url: "live/getLive",
@@ -82,77 +81,36 @@ function lodeLives() {
 // }
 
 
-
-function addlive(live) {
-    let li = document.createElement("li");
-    var flag;
-    var type;
-    var money;
-    if (live.liveStatus==1) {
-        flag="直播";
-        type="eye";
-    }else if (live.liveStatus==2){
-        flag="回放";
-        type="play"
-    }
-    li.innerHTML='      <div class="img">\n' +
-        '        <img src="'+live.thumbnail+'">\n' +
-        '      </div>\n' +
-        '      <div class="desc">\n' +
-        '        <div class="t">'+live.liveTitle+'</div>\n' +
-        '        <div class="info">\n' +
-        '          <span>酷酷炫炫、</span>\n' +
-        '          <span><i class="eye"></i>1.2万</span>\n' +
-        '        </div>\n' +
-        '      </div>\n' +
-        '      <div class="tips">\n' +
-        '        <span class="l">'+flag+'</span>\n' +
-        '        <span class="r">'+live.tag+'</span>\n' +
-        '      </div>';
-
-
-
-
-    return li;
-}
-
-// <div className="img">\n' +
-//     // '<img src="'+live.thumbnail+'">\n' +
-//         //
-//         //
-//         // '</div>
-// \n' +
-// // '
-// <div className="desc">\n' +
-//     // '
-//     <div className="t">'+live.liveTitle+'</div>
-//     \n' +
-//     // '
-//     <div className="info">\n' +
-//         // '
-//     </div>
-//     \n' +
-//     // '</div>
-// \n' +
-// // '
-// <div className="tips">\n' +
-//     //
-//     // '<span className="l">'+flag+'</span>\n' +
-//     // '<span className="r">'+live.tag+'</span>\n' +
-//     // '</div>
-// '
+// 第二种方法
+// function addlive(live) {
+//     let li = document.createElement("li");
+//     var flag;
+//     var type;
+//     var money;
+//     if (live.liveStatus==1) {
+//         flag="直播";
+//         type="eye";
+//     }else if (live.liveStatus==2){
+//         flag="回放";
+//         type="play"
+//     }
+//     li.innerHTML='      <div class="img">\n' +
+//         '        <img src="'+live.thumbnail+'">\n' +
+//         '      </div>\n' +
+//         '      <div class="desc">\n' +
+//         '        <div class="t">'+live.liveTitle+'</div>\n' +
+//         '        <div class="info">\n' +
+//         '          <span>酷酷炫炫、</span>\n' +
+//         '          <span><i class="eye"></i>1.2万</span>\n' +
+//         '        </div>\n' +
+//         '      </div>\n' +
+//         '      <div class="tips">\n' +
+//         '        <span class="l">'+flag+'</span>\n' +
+//         '        <span class="r">'+live.tag+'</span>\n' +
+//         '      </div>';
 //
-// '
-// <img src="'+live.thumbnail+'">'+
 //
-//     <div className="desc">
-//         <div className="t">'+live.liveTitle+'</div>
-//         <div className="info">
-//             <span></span>
-//             <span><i className="eye"></i></span>
-//         </div>
-//     </div>
-//     <div className="tips">
-//         <span className="l">'+flag+'</span>
-//         <span className="r">'+live.tag+'</span>
-//     </div>
+//
+//
+//     return li;
+// }

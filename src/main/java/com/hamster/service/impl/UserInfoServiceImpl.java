@@ -1,6 +1,8 @@
 package com.hamster.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.github.yulichang.base.MPJBaseMapper;
+import com.github.yulichang.base.MPJBaseServiceImpl;
 import com.hamster.entity.UserInfo;
 import com.hamster.mapper.UserInfoMapper;
 import com.hamster.service.UserInfoService;
@@ -14,5 +16,5 @@ import org.springframework.stereotype.Service;
  * @createTime 2023/7/14 10:09
  **/
 @Service
-public class UserInfoServiceImpl extends ServiceImpl<UserInfoMapper, UserInfo> implements UserInfoService {
+public class UserInfoServiceImpl extends MPJBaseServiceImpl<UserInfoMapper, UserInfo> implements UserInfoService {
 }
