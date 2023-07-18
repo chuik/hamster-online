@@ -20,4 +20,19 @@ public class TestController {
         return "mine";
     }
 
+
+    @RequestMapping("/CompressUpload")
+    public String goCompressUpload(){
+        return "compress_upload";
+    }
+
+    // QG开头的controller里也需要把网络地址改成live
+
+
+    @RequestMapping("/live")
+    public String live(){
+        return "live";
+    }
+
+
 }

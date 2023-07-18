@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>图片上传</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <script src="/js/jquery.min.js" type="text/javascript"></script>
+
+    <style>
+        html {
+            font-size: 10px;
+        }
+
+        .title {
+            font-size: 2rem; /*font-size=20px*/
+        }
+
+        .yl-box {
+            border-radius: 0.5rem;
+            border: 0.1rem solid #333;
+            width: 50%;
+            text-align: center;
+        }
+        .yl-box>img{
+            width: 100%;
+        }
+    </style>
+
+</head>
+<body>
+<div>
+    头像：<br>
+    <div class="yl-box" onclick="imageUpLoad()">
+        <!--   预览图  -->
+        <img id="ylt" src="/image/upload.png"/>
+    </div>
+
+    <input type="file" style="display: none" id="file" accept="image/*" onchange="fileChange(this)">
+
+
+</div>
+</body>
+<script type="text/javascript">
+    function imageUpLoad() {
+        //获取 input:file 的html元素对象
+        let file = document.getElementById("file");
+
+        let mouseEvent = document.createEvent("MouseEvent");//通过JS创建一个 鼠标事件
+        mouseEvent.initEvent("click", true, true);
+        file.dispatchEvent(mouseEvent);
+    }
+
+    function fileChange(file) {
+        //上传图片的逻辑 写在这个里
+        //获取上传的图片对象
+        let imgFile = file.files[0];
+
+        let formData = new FormData();
+        formData.append("file", imgFile)
+        $.ajax({
+            url: "/file/compressUpload",
+            type: "post",//文件上传的请求方式 必须是post的
+            data: formData,
+            processData: false,//告诉 jquery不要去处理数据
+            contentType: false,//告诉jQuery不要去设置Content-Type请求头
+            dataType: "json",
+            success(res) {
+                if (res.code == 200) {
+                    //把预览图的 src 替换为上传之后的 图片URL
+                    // $("#ylt").src = res.data;
+                    document.getElementById("ylt").setAttribute("src",res.data)
+                }
+            }
+        })
+    }
+</script>
+</html>
