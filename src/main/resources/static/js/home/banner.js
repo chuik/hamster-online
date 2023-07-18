@@ -7,7 +7,7 @@ $(function () {
 
 function loadBannerList() {
     $.ajax({
-        url: "banner/list",
+        url: "/banner/list",
         type: "get",
         dataType: "json",
         async: false,

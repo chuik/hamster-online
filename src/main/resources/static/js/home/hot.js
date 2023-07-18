@@ -5,7 +5,7 @@ $(function () {
 function initHotLive(pageIndex) {
     axios({
         method: "get",
-        url: "live/getLives/" + pageIndex,
+        url: "/live/getLives/" + pageIndex,
         responseType: "json"
     }).then(res => {
         let data = res.data;

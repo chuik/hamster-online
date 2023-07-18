@@ -50,3 +50,7 @@ mybatis-plus-join:
   table-alias: t
   #副表逻辑删除条件的位置，支持where、on默认 where （1.4.4+）
   logic-del-type: where
+
+
+fileUpload:
+  filePath: D:\upload\

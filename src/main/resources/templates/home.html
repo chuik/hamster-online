@@ -63,7 +63,7 @@
       <i></i>
       <p>资讯</p>
     </li>
-    <li class="item mine">
+    <li class="item mine" onclick="goMinePage()">
       <i></i>
       <p>我的</p>
     </li>
@@ -84,4 +84,11 @@
     $('.foot-nav ul li').removeClass('active')
     $(this).addClass('active')
   })
+
+
+  function goMinePage(){
+    location.href="/goMinePage"
+  }
+
+
 </script>

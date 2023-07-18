@@ -41,4 +41,6 @@ public class UserInfo implements Serializable {
     */
     private String nickName;
 
+    private String img;
+
 }

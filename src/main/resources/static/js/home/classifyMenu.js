@@ -6,7 +6,7 @@ $(function() {
 
 function initClassifyMenu(){
     $.ajax({
-        url:"classify/getMenus",
+        url:"/classify/getMenus",
         type:"get",
         dataType:"json",
         success(res){
